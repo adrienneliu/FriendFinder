@@ -9,18 +9,137 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
 
+        .bg {
+            /* The image used */
+            background-image: url("http://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+        }
+
+        .display-4 {
+            padding-top: 10%;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="container">
-        <div class="jumbotron jumbotron-fluid mt-5">
-            <h1 class="display-4">Hi</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
 
-        <div class="text-center">
-            <a href="/"><button" class="btn btn-info">Home</button></a>
+<body>
+    <div class="bg" style="margin-top:0%">
+        <div class="container">
+            <!-- <div class="jumbotron jumbotron-fluid mt-5"> -->
+            <h1 class="display-4">Take Me</h1>
+            <div class="container">
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
+                </p>
+
+                <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
+                    <div class="card-header">
+                        How much do you like spicy hot foods?
+                    </div>
+                    <ul class="list-group list-group-flush input-group input-group-prepend">
+                        <li class="list-group-item"><input type="radio"
+                                aria-label="Radio button for following text input" class="feature_radio"
+                                name="feature_radio"> I LOVE it!</li>
+                        <li class="list-group-item"> <input type="radio"
+                                aria-label="Radio button for following text input" class="feature_radio"
+                                name="feature_radio"> I would die if I ate it... </li>
+                        <li class="list-group-item"> <input type="radio"
+                                aria-label="Radio button for following text input" class="feature_radio"
+                                name="feature_radio"> I'm not used to eating it, so I'd rather not. </li>
+                        <li class="list-group-item"> <input type="radio"
+                            aria-label="Radio button for following text input" class="feature_radio"
+                            name="feature_radio"> I'm not used to eating it, BUT I wouldn't mind trying. </li>
+                    </ul>
+                </div>
+                <p>
+                    <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
+                        <div class="card-header">
+                            What do you like to drink on a nice sunny day? 
+                        </div>
+                        <ul class="list-group list-group-flush input-group input-group-prepend">
+                            <li class="list-group-item"><input type="radio"
+                                    aria-label="Radio button for following text input" class="feature_radio"
+                                    name="feature_radio"> Beer! </li>
+                            <li class="list-group-item "> <input type="radio"
+                                    aria-label="Radio button for following text input" class="feature_radio"
+                                    name="feature_radio"> Coffee! </li>
+                            <li class="list-group-item "> <input type="radio"
+                                    aria-label="Radio button for following text input" class="feature_radio"
+                                    name="feature_radio"> Give me that boba! </li>
+                            <li class="list-group-item "> <input type="radio"
+                                aria-label="Radio button for following text input" class="feature_radio"
+                                name="feature_radio"> Lassi! </li>
+                        </ul>
+                    </div>
+                    <!-- <p>
+                        <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
+                            <div class="card-header">
+                                Featured
+                            </div>
+                            <ul class="list-group list-group-flush input-group input-group-prepend">
+                                <li class="list-group-item "><input type="radio"
+                                        aria-label="Radio button for following text input" class="feature_radio"
+                                        name="feature_radio"> Cras justo odio</li>
+                                <li class="list-group-item "> <input type="radio"
+                                        aria-label="Radio button for following text input" class="feature_radio"
+                                        name="feature_radio"> Dapibus ac facilisis in</li>
+                                <li class="list-group-item "> <input type="radio"
+                                        aria-label="Radio button for following text input" class="feature_radio"
+                                        name="feature_radio"> Vestibulum at eros</li>
+                            </ul>
+                        </div>
+                        <p>
+                            <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
+                                <div class="card-header">
+                                    Featured
+                                </div>
+                                <ul class="list-group list-group-flush input-group input-group-prepend">
+                                    <li class="list-group-item "><input type="radio"
+                                            aria-label="Radio button for following text input" class="feature_radio"
+                                            name="feature_radio"> Cras justo odio</li>
+                                    <li class="list-group-item "> <input type="radio"
+                                            aria-label="Radio button for following text input" class="feature_radio"
+                                            name="feature_radio"> Dapibus ac facilisis in</li>
+                                    <li class="list-group-item "> <input type="radio"
+                                            aria-label="Radio button for following text input" class="feature_radio"
+                                            name="feature_radio"> Vestibulum at eros</li>
+                                </ul>
+                            </div>
+                            <p>
+                                <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
+                                    <div class="card-header">
+                                        Featured
+                                    </div>
+                                    <ul class="list-group list-group-flush input-group input-group-prepend">
+                                        <li class="list-group-item "><input type="radio"
+                                                aria-label="Radio button for following text input" class="feature_radio"
+                                                name="feature_radio"> Cras justo odio</li>
+                                        <li class="list-group-item "> <input type="radio"
+                                                aria-label="Radio button for following text input" class="feature_radio"
+                                                name="feature_radio"> Dapibus ac facilisis in</li>
+                                        <li class="list-group-item "> <input type="radio"
+                                                aria-label="Radio button for following text input" class="feature_radio"
+                                                name="feature_radio"> Vestibulum at eros</li>
+                                    </ul>
+                                </div> -->
+                                <p>
+
+                                    <div class="text-center">
+                                        <a href="/">
+                                            <button" class="btn btn-info">Home</button>
+                                        </a>
+                                    </div>
+            </div>
         </div>
     </div>
 

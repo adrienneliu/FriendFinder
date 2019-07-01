@@ -9,21 +9,58 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
 
+        .bg {
+            /* The image used */
+            background-image: url("http://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            margin-top: 0%;
+        }
+
+        /* .jumbotron-fluid {
+            margin-left: 10%;
+            margin-right: 10%;
+        margin-top:2%;
+
+        } */
+
+
+        .display-4 {
+            padding-top: 25%;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron jumbotron-fluid mt-5">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
+    <div class="bg" style="margin-top:0%">
+        <!-- <div class="jumbotron jumbotron-fluid"> -->
+            <div class="container">
+                <h1 class="display-4">Food Finder</h1>
+                <p class="lead">There's going to be plentry of Friend Finder apps out there! Here, we have a Food Finder
+                    that will match you to your next vacation spot based on the food you want to eat!</p>
+            </div>
 
-        <div class="text-center">
-            <a href="/survey"><button" class="btn btn-info">Survey</button></a>
-        </div>
+            <div class="text-center">
+                <a href="/survey">
+                    <button" class="btn btn-info">Survey</button>
+                </a>
+            </div>
+        <!-- </div> -->
     </div>
-
 
 
 
