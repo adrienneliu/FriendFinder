@@ -29,6 +29,11 @@
         .display-4 {
             padding-top: 10%;
         }
+
+        .form-group {
+            width: 75%;
+            margin-left: 10%;
+        }
     </style>
 </head>
 
@@ -41,44 +46,49 @@
             <div class="container">
                 <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
                 </p>
-
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="What do they call you?">
+                </div>
                 <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
+
                     <div class="card-header">
                         How much do you like spicy hot foods?
                     </div>
                     <ul class="list-group list-group-flush input-group input-group-prepend">
                         <li class="list-group-item"><input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="feature_radio"> I LOVE it!</li>
+                                name="questionOne" id="questionOne" value="1"> I LOVE it!</li>
                         <li class="list-group-item"> <input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="feature_radio"> I would die if I ate it... </li>
+                                name="questionOne" id="questionOne" value="2"> I would die if I ate it... </li>
                         <li class="list-group-item"> <input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="feature_radio"> I'm not used to eating it, so I'd rather not. </li>
+                                name="questionOne" id="questionOne" value="3"> I'm not used to eating it, so I'd rather not. </li>
                         <li class="list-group-item"> <input type="radio"
-                            aria-label="Radio button for following text input" class="feature_radio"
-                            name="feature_radio"> I'm not used to eating it, BUT I wouldn't mind trying. </li>
+                                aria-label="Radio button for following text input" class="feature_radio"
+                                name="questionOne" id="questionOne" value="4"> I'm not used to eating it, BUT I wouldn't mind trying.
+                        </li>
                     </ul>
                 </div>
                 <p>
                     <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
                         <div class="card-header">
-                            What do you like to drink on a nice sunny day? 
+                            What do you like to drink on a nice sunny day?
                         </div>
                         <ul class="list-group list-group-flush input-group input-group-prepend">
                             <li class="list-group-item"><input type="radio"
                                     aria-label="Radio button for following text input" class="feature_radio"
-                                    name="feature_radio"> Beer! </li>
+                                    name="questionTwo" id="questionTwo" value="1"> Beer! </li>
                             <li class="list-group-item "> <input type="radio"
                                     aria-label="Radio button for following text input" class="feature_radio"
-                                    name="feature_radio"> Coffee! </li>
+                                    name="questionTwo" id="questionTwo" value="2"> Coffee! </li>
                             <li class="list-group-item "> <input type="radio"
                                     aria-label="Radio button for following text input" class="feature_radio"
-                                    name="feature_radio"> Give me that boba! </li>
+                                    name="questionTwo" id="questionTwo" value="3"> Give me that boba! </li>
                             <li class="list-group-item "> <input type="radio"
-                                aria-label="Radio button for following text input" class="feature_radio"
-                                name="feature_radio"> Lassi! </li>
+                                    aria-label="Radio button for following text input" class="feature_radio"
+                                    name="questionTwo" id="questionTwo" value="4"> Lassi! </li>
                         </ul>
                     </div>
                     <!-- <p>
@@ -132,13 +142,45 @@
                                                 name="feature_radio"> Vestibulum at eros</li>
                                     </ul>
                                 </div> -->
-                                <p>
+                    <p>
 
-                                    <div class="text-center">
-                                        <a href="/">
-                                            <button" class="btn btn-info">Home</button>
-                                        </a>
-                                    </div>
+                        <div class="text-center">
+                            <a href="/">
+                                <button" class="btn btn-info">Home</button>
+                            </a>
+                            <a href="/api/results">
+                                <button" class="btn btn-info">Results API</button>
+                            </a>
+                            <button" class="btn btn-info" id="submit-results" type="submit" data-toggle="modal" data-target="#exampleModal">Submit</button>
+
+                                <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                        </div>
+
+                        <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button> -->
+      
+  
             </div>
         </div>
     </div>
@@ -147,9 +189,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -157,5 +197,38 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+<script type="text/javascript">
+    // function runResults() {
+    //     $.ajax({ url: "/api/results", method: "GET" })
+    //         .then(function (resultsData) {
+    //             console.log(resultsData);
+    //         });
+    // };
+
+    $("#submit-results").on("click", function(event) {
+        event.preventDefault();
+
+        // alert("Hello");
+        var newResults = {
+            name: $("#name").val().trim(),
+            scores: [
+                $("#questionOne").val().trim(),
+                $("#questionTwo").val().trim()
+            ]
+        };
+
+        //console.log(newResults);
+
+        
+        $.post("/api/results", newResults)
+        .then(function (data) {
+           console.log("add", data);
+           alert("adding");
+        });
+    
+    }
+    )
+
+</script>
 
 </html>
