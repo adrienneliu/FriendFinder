@@ -55,93 +55,47 @@
                     <div class="card-header">
                         How much do you like spicy hot foods?
                     </div>
-                    <ul class="list-group list-group-flush input-group input-group-prepend">
+              
+                    <ul class="list-group list-group-flush input-group input-group-prepend" id="questionOne">
                         <li class="list-group-item"><input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="questionOne" id="questionOne" value="1"> I LOVE it!</li>
+                                name="questionOne"  value="1"> I LOVE it!</li>
                         <li class="list-group-item"> <input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="questionOne" id="questionOne" value="2"> I would die if I ate it... </li>
+                                name="questionOne" value="2"> I would die if I ate it... </li>
                         <li class="list-group-item"> <input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="questionOne" id="questionOne" value="3"> I'm not used to eating it, so I'd rather not. </li>
+                                name="questionOne"  value="3"> I'm not used to eating it, so I'd rather
+                            not. </li>
                         <li class="list-group-item"> <input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="questionOne" id="questionOne" value="4"> I'm not used to eating it, BUT I wouldn't mind trying.
+                                name="questionOne" value="4"> I'm not used to eating it, BUT I wouldn't
+                            mind trying.
                         </li>
                     </ul>
+           
                 </div>
                 <p>
                     <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
                         <div class="card-header">
                             What do you like to drink on a nice sunny day?
                         </div>
-                        <ul class="list-group list-group-flush input-group input-group-prepend">
+                        <ul class="list-group list-group-flush input-group input-group-prepend" id="questionTwo">
                             <li class="list-group-item"><input type="radio"
                                     aria-label="Radio button for following text input" class="feature_radio"
-                                    name="questionTwo" id="questionTwo" value="1"> Beer! </li>
+                                    name="questionTwo" value="1"> Beer! </li>
                             <li class="list-group-item "> <input type="radio"
                                     aria-label="Radio button for following text input" class="feature_radio"
-                                    name="questionTwo" id="questionTwo" value="2"> Coffee! </li>
+                                    name="questionTwo" value="2"> Coffee! </li>
                             <li class="list-group-item "> <input type="radio"
                                     aria-label="Radio button for following text input" class="feature_radio"
-                                    name="questionTwo" id="questionTwo" value="3"> Give me that boba! </li>
+                                    name="questionTwo" value="3"> Give me that boba! </li>
                             <li class="list-group-item "> <input type="radio"
                                     aria-label="Radio button for following text input" class="feature_radio"
-                                    name="questionTwo" id="questionTwo" value="4"> Lassi! </li>
+                                    name="questionTwo"  value="4"> Lassi! </li>
                         </ul>
                     </div>
-                    <!-- <p>
-                        <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
-                            <div class="card-header">
-                                Featured
-                            </div>
-                            <ul class="list-group list-group-flush input-group input-group-prepend">
-                                <li class="list-group-item "><input type="radio"
-                                        aria-label="Radio button for following text input" class="feature_radio"
-                                        name="feature_radio"> Cras justo odio</li>
-                                <li class="list-group-item "> <input type="radio"
-                                        aria-label="Radio button for following text input" class="feature_radio"
-                                        name="feature_radio"> Dapibus ac facilisis in</li>
-                                <li class="list-group-item "> <input type="radio"
-                                        aria-label="Radio button for following text input" class="feature_radio"
-                                        name="feature_radio"> Vestibulum at eros</li>
-                            </ul>
-                        </div>
-                        <p>
-                            <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
-                                <div class="card-header">
-                                    Featured
-                                </div>
-                                <ul class="list-group list-group-flush input-group input-group-prepend">
-                                    <li class="list-group-item "><input type="radio"
-                                            aria-label="Radio button for following text input" class="feature_radio"
-                                            name="feature_radio"> Cras justo odio</li>
-                                    <li class="list-group-item "> <input type="radio"
-                                            aria-label="Radio button for following text input" class="feature_radio"
-                                            name="feature_radio"> Dapibus ac facilisis in</li>
-                                    <li class="list-group-item "> <input type="radio"
-                                            aria-label="Radio button for following text input" class="feature_radio"
-                                            name="feature_radio"> Vestibulum at eros</li>
-                                </ul>
-                            </div>
-                            <p>
-                                <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
-                                    <div class="card-header">
-                                        Featured
-                                    </div>
-                                    <ul class="list-group list-group-flush input-group input-group-prepend">
-                                        <li class="list-group-item "><input type="radio"
-                                                aria-label="Radio button for following text input" class="feature_radio"
-                                                name="feature_radio"> Cras justo odio</li>
-                                        <li class="list-group-item "> <input type="radio"
-                                                aria-label="Radio button for following text input" class="feature_radio"
-                                                name="feature_radio"> Dapibus ac facilisis in</li>
-                                        <li class="list-group-item "> <input type="radio"
-                                                aria-label="Radio button for following text input" class="feature_radio"
-                                                name="feature_radio"> Vestibulum at eros</li>
-                                    </ul>
-                                </div> -->
+
                     <p>
 
                         <div class="text-center">
@@ -151,36 +105,35 @@
                             <a href="/api/results">
                                 <button" class="btn btn-info">Results API</button>
                             </a>
-                            <button" class="btn btn-info" id="submit-results" type="submit" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                            <button" class="btn btn-info" id="submit-results" type="submit" data-toggle="modal"
+                                data-target="#exampleModal">Submit</button>
 
                                 <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">First Title</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Hello</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
 
-                        <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-      </button> -->
-      
-  
+
             </div>
         </div>
     </div>
@@ -205,29 +158,38 @@
     //         });
     // };
 
-    $("#submit-results").on("click", function(event) {
+    $("#submit-results").on("click", function (event) {
         event.preventDefault();
 
         // alert("Hello");
         var newResults = {
             name: $("#name").val().trim(),
             scores: [
-                $("#questionOne").val().trim(),
-                $("#questionTwo").val().trim()
+                // $("#questionOne").val().trim(),
+                // $("#questionTwo").val().trim()
+                $('input[name=questionOne]:checked', '#questionOne').val(),
+                $('input[name=questionTwo]:checked', '#questionTwo').val()
+                
             ]
         };
 
         //console.log(newResults);
 
-        
+
         $.post("/api/results", newResults)
-        .then(function (data) {
-           console.log("add", data);
-           alert("adding");
-        });
-    
-    }
-    )
+            .then(function (data) {
+                console.log("add", data);
+                alert("adding");
+            });
+
+            $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+    })
+
 
 </script>
 
