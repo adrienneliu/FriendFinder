@@ -40,19 +40,21 @@ module.exports = function (app) {
                 //give the new number to the difference
                 maxDiff = scoreDiff;
                 resultDisplay = resultsData[i].name;
-                resultImage =  resultsData[i].url;
+                resultImage = resultsData[i].url;
                 resultMessage = resultsData[i].message;
-                console.log("display")
-                console.log(resultDisplay);
-                console.log(resultImage);
+                // console.log("display")
+                // console.log(resultDisplay);
+                // console.log(resultImage);
             }
 
         }
         resultsData.push(newResults);
-        console.log("final")
-        console.log(resultDisplay)
-         res.json({matchResult: resultDisplay, matchPhoto: resultImage, matchMessage:resultMessage});
-  
-    }); 
+        // console.log("final")
+        // console.log(resultDisplay)
+
+//taking key and passing values to be used in survey.html
+        res.json({ matchResult: resultDisplay, matchPhoto: resultImage, matchMessage: resultMessage });
+
+    });
 };
 

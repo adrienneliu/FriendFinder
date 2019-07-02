@@ -292,13 +292,11 @@
 
                                                     <div class="text-center">
                                                         <a href="/">
-                                                            <button" class="btn btn-info">Home</button>
+                                                            <button" class="btn btn-info bg-secondary text-white">
+                                                                Home</button>
                                                         </a>
 
-                                                        <!-- <button" class="btn btn-info" id="submit-results" type="submit">
-                                                    Submit</button> -->
-
-                                                        <button type="button" class="btn btn-primary"
+                                                        <button type="button" class="btn btn-primary  bg-info"
                                                             data-toggle="modal" data-target="#exampleModal"
                                                             id="submit-results">
                                                             Submit
@@ -310,18 +308,7 @@
                                                             <class="btn btn-info">Results API</button>
                                                         </a>
                                                     </div>
-
-                                                    <!-- Button trigger modal -->
-                                                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                data-target="#exampleModal">
-                                                Launch demo modal
-                                            </button> -->
-
-
-
             </div>
-
-
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -334,9 +321,11 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <h1 id="resultName"></h1> 
-                            <img id="resultPhoto" src="#" width="450"> 
-                            <center><p id="messageResult"></p></center>
+                            <h1 id="resultName"></h1>
+                            <img id="resultPhoto" src="#" width="450">
+                            <center>
+                                <p id="messageResult"></p>
+                            </center>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -346,10 +335,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -392,25 +377,11 @@
 
                 $('#resultName').html(data.matchResult);
                 $("#resultPhoto").attr("src", data.matchPhoto);
-                 $("#exampleModal").modal("toggle");
-                 $("#messageResult").html(data.matchMessage);
-        });
+                $("#exampleModal").modal("toggle");
+                $("#messageResult").html(data.matchMessage);
+            });
 
-        // var currentURL = window.location.origin;
-        // $.post(currentURL + "/api/results", newResults, function (data) {
-        //     .then(function (data) {
-        //     console.log(JSON.stringify(data));
-        //alert("adding");
-
-        // console.log("data name" + JSON.stringify(data.name));
-        // $('#resultName').html(data.matchResult);
-        // $('#resultPhoto').html(data.matchPhoto);
-        
-        // $("#exampleModal").modal("toggle");
     });
-    //})
-
-
 </script>
 
 </html>
