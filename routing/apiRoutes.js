@@ -41,6 +41,7 @@ module.exports = function (app) {
                 maxDiff = scoreDiff;
                 resultDisplay = resultsData[i].name;
                 resultImage =  resultsData[i].url;
+                resultMessage = resultsData[i].message;
                 console.log("display")
                 console.log(resultDisplay);
                 console.log(resultImage);
@@ -50,7 +51,7 @@ module.exports = function (app) {
         resultsData.push(newResults);
         console.log("final")
         console.log(resultDisplay)
-         res.json({matchResult: resultDisplay, matchPhoto: resultImage});
+         res.json({matchResult: resultDisplay, matchPhoto: resultImage, matchMessage:resultMessage});
   
     }); 
 };

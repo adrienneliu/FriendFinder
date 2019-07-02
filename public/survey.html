@@ -335,7 +335,8 @@
                         </div>
                         <div class="modal-body">
                             <h1 id="resultName"></h1> 
-                            <img id="resultPhoto" src="#" width="450">
+                            <img id="resultPhoto" src="#" width="450"> 
+                            <center><p id="messageResult"></p></center>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -392,6 +393,7 @@
                 $('#resultName').html(data.matchResult);
                 $("#resultPhoto").attr("src", data.matchPhoto);
                  $("#exampleModal").modal("toggle");
+                 $("#messageResult").html(data.matchMessage);
         });
 
         // var currentURL = window.location.origin;
