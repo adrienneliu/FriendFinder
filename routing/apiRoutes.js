@@ -6,50 +6,52 @@
 var resultsData = require("../app/data/friends");
 
 
-module.exports = function(app) {
+module.exports = function (app) {
     //shows the template data inside results
-app.get("/api/results", function(req, res) {
-    //res.json("hello");
-    res.json(resultsData);
-});
+    app.get("/api/results", function (req, res) {
+        //res.json("hello");
+        res.json(resultsData);
+    });
 
 
-app.post("/api/results", function(req, res){
-    var newResults = req.body; 
+    app.post("/api/results", function (req, res) {
+        var newResults = req.body;
+        //console.log(newResults);
 
-    //newResults.routeName = newResults.name.replace(/\s+/g, "").toLowerCase(); 
-    console.log(newResults);
+        //getting the scores from user input 
+        var userScore = newResults.scores;
+        //console.log(userScore);
 
-    //getting the scores from user input 
-    var userScore = newResults.scores; 
-    //console.log(userScore);
+        var resultDisplay = "";
+        var maxDiff = 10;
 
-    var resultDisplay="";
-    var maxDiff = 10;
-    
 
-    //iterate through resultsdata for comparing
-    for (var i=0; i<resultsData.length; i++) {
-        var scoreDiff = 0; 
+        //iterate through resultsdata for comparing
+        for (var i = 0; i < resultsData.length; i++) {
+            var scoreDiff = 0;
 
-        //compares user's scores with resultsdata
-        for (var j=0; j<userScore.length; j++) {
-            scoreDiff = Math.abs(parseInt(resultsData[i].scores[j]) - parseInt(userScore[j]));
-            // console.log("test: " + diff);
-        }
+            //compares user's scores with resultsdata
+            for (var j = 0; j < userScore.length; j++) {
+                scoreDiff = Math.abs(parseInt(resultsData[i].scores[j]) - parseInt(userScore[j]));
+                // console.log("test: " + diff);
+            }
             if (scoreDiff < maxDiff) {
 
-                    //give the new number to the difference
-                    maxDiff = scoreDiff; 
-                    resultDisplay = resultsData[i].name;
-
-                    console.log(resultDisplay);
+                //give the new number to the difference
+                maxDiff = scoreDiff;
+                resultDisplay = resultsData[i].name;
+                resultImage =  resultsData[i].url;
+                console.log("display")
+                console.log(resultDisplay);
+                console.log(resultImage);
             }
 
-    }
-    resultsData.push(newResults);
-
-    res.json("match: " + resultDisplay);
-})
+        }
+        resultsData.push(newResults);
+        console.log("final")
+        console.log(resultDisplay)
+         res.json({matchResult: resultDisplay, matchPhoto: resultImage});
+  
+    }); 
 };
 
