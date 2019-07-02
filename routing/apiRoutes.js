@@ -24,17 +24,32 @@ app.post("/api/results", function(req, res){
     var userScore = newResults.scores; 
     //console.log(userScore);
 
+    var resultDisplay="";
+    var maxDiff = 10;
+    
+
     //iterate through resultsdata for comparing
     for (var i=0; i<resultsData.length; i++) {
-        var diff = 0; 
+        var scoreDiff = 0; 
 
         //compares user's scores with resultsdata
         for (var j=0; j<userScore.length; j++) {
-            diff = Math.abs(parseInt(resultsData[i].scores[j]) - parseInt(userScore[j]));
-            console.log("test: " + diff);
+            scoreDiff = Math.abs(parseInt(resultsData[i].scores[j]) - parseInt(userScore[j]));
+            // console.log("test: " + diff);
         }
+            if (scoreDiff < maxDiff) {
+
+                    //give the new number to the difference
+                    maxDiff = scoreDiff; 
+                    resultDisplay = resultsData[i].name;
+
+                    console.log(resultDisplay);
+            }
+
     }
     resultsData.push(newResults);
+
+    res.json("match: " + resultDisplay);
 })
 };
 

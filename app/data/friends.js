@@ -1,11 +1,15 @@
 var resultsArray = [
     {
-        name: "Adrienne", 
-        scores: ["3","3"]
+        name: "India", 
+        scores: ["1","4"]
     },
     {
-        name: "Sum",
-        scores: ["2", "4"]
+        name: "Italy",
+        scores: ["3", "2"]
+    }, 
+    {
+        name: "Taiwan", 
+        scores: ["4", "3"]
     }
 ];
 
