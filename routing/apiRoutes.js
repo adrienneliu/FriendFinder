@@ -17,12 +17,24 @@ app.get("/api/results", function(req, res) {
 app.post("/api/results", function(req, res){
     var newResults = req.body; 
 
-    newResults.routeName = newResults.name.replace(/\s+/g, "").toLowerCase(); 
-
+    //newResults.routeName = newResults.name.replace(/\s+/g, "").toLowerCase(); 
     console.log(newResults);
 
+    //getting the scores from user input 
+    var userScore = newResults.scores; 
+    //console.log(userScore);
+
+    //iterate through resultsdata for comparing
+    for (var i=0; i<resultsData.length; i++) {
+        var diff = 0; 
+
+        //compares user's scores with resultsdata
+        for (var j=0; j<userScore.length; j++) {
+            diff = Math.abs(parseInt(resultsData[i].scores[j]) - parseInt(userScore[j]));
+            console.log("test: " + diff);
+        }
+    }
     resultsData.push(newResults);
-    res.json(resultsData);
 })
 };
 

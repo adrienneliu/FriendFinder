@@ -1,7 +1,11 @@
 var resultsArray = [
     {
         name: "Adrienne", 
-        scores: [3,3]
+        scores: ["3","3"]
+    },
+    {
+        name: "Sum",
+        scores: ["2", "4"]
     }
 ];
 

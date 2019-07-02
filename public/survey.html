@@ -55,17 +55,17 @@
                     <div class="card-header">
                         How much do you like spicy hot foods?
                     </div>
-              
+
                     <ul class="list-group list-group-flush input-group input-group-prepend" id="questionOne">
                         <li class="list-group-item"><input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="questionOne"  value="1"> I LOVE it!</li>
+                                name="questionOne" value="1"> I LOVE it!</li>
                         <li class="list-group-item"> <input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
                                 name="questionOne" value="2"> I would die if I ate it... </li>
                         <li class="list-group-item"> <input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
-                                name="questionOne"  value="3"> I'm not used to eating it, so I'd rather
+                                name="questionOne" value="3"> I'm not used to eating it, so I'd rather
                             not. </li>
                         <li class="list-group-item"> <input type="radio"
                                 aria-label="Radio button for following text input" class="feature_radio"
@@ -73,7 +73,7 @@
                             mind trying.
                         </li>
                     </ul>
-           
+
                 </div>
                 <p>
                     <div class="card justify-content-center" style="width: 75%; margin-left: 10%;">
@@ -92,7 +92,7 @@
                                     name="questionTwo" value="3"> Give me that boba! </li>
                             <li class="list-group-item "> <input type="radio"
                                     aria-label="Radio button for following text input" class="feature_radio"
-                                    name="questionTwo"  value="4"> Lassi! </li>
+                                    name="questionTwo" value="4"> Lassi! </li>
                         </ul>
                     </div>
 
@@ -108,7 +108,7 @@
                             <button" class="btn btn-info" id="submit-results" type="submit" data-toggle="modal"
                                 data-target="#exampleModal">Submit</button>
 
-                                <!-- Modal -->
+                                <!-- Modal
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -130,7 +130,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                         </div>
 
 
@@ -169,7 +169,7 @@
                 // $("#questionTwo").val().trim()
                 $('input[name=questionOne]:checked', '#questionOne').val(),
                 $('input[name=questionTwo]:checked', '#questionTwo').val()
-                
+
             ]
         };
 
@@ -181,13 +181,6 @@
                 console.log("add", data);
                 alert("adding");
             });
-
-            $('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget)
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
     })
 
 
